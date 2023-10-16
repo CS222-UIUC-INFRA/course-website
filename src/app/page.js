@@ -1,5 +1,5 @@
-import SampleComponent from "@/components/SampleComponent/SampleComponent";
-import Image from "next/image";
+import SampleComponent from '@/components/SampleComponent/SampleComponent';
+import Image from 'next/image';
 
 export default function Home() {
     return (

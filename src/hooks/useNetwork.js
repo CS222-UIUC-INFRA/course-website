@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 function useNetwork() {
     //Note that you can make use of other hooks within custom hooks
@@ -13,12 +13,12 @@ function useNetwork() {
             console.log("Oops, I'm offline");
             setOnline(false);
         };
-        window.addEventListener("offline", goOffline);
-        window.addEventListener("online", goOnline);
+        window.addEventListener('offline', goOffline);
+        window.addEventListener('online', goOnline);
 
         return () => {
-            window.removeEventListener("offline", goOffline);
-            window.removeEventListener("online", goOnline);
+            window.removeEventListener('offline', goOffline);
+            window.removeEventListener('online', goOnline);
         };
     }, []);
 
