@@ -1,7 +1,7 @@
 #!/bin/sh
 
 BRANCH_PATTERN="(bug|test)/"
-
+echo "hello"
 while read oldrev newrev refname; do
     if ! [[ $refname =~ ^refs/heads/$BRANCH_PATTERN ]]; then
         echo "ERROR: Branch name \"$refname\" does not match the required pattern (feat/, bug/, or test/)."
