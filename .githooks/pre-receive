@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 LC_ALL=C
-
+echo "hello"
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
 valid_branch_regex="^(bug|test)\/[a-z0-9._-]+$"
