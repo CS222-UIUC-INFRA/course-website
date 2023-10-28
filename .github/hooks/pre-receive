@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH_PATTERN="(feat|bug|test)/"
+BRANCH_PATTERN="(bug|test)/"
 
 while read oldrev newrev refname; do
     if ! [[ $refname =~ ^refs/heads/$BRANCH_PATTERN ]]; then
