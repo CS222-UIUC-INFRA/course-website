@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 LC_ALL=C
 echo "hello wold "
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
@@ -13,4 +13,8 @@ then
     exit 1
 fi
 
+set -eu
+hook_name="$(basename "$0")"
+hook_script=".git/hooks/$hook_name"
+[ -e "$hook_script" ] && "$hook_script"
 exit 0
