@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chmod +x .
+chmod +x .githooks/.
 git config core.hooksPath .githooks
 
 current_branch="$(git rev-parse --abbrev-ref HEAD)"
