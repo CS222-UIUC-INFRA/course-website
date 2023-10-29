@@ -1,0 +1,15 @@
+#!/bin/bash
+
+chmod +x .
+git config core.hooksPath .githooks
+
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+pattern="^(feat|bug|test)\/.*$"
+
+if [[ ! $current_branch =~ $pattern ]]; then
+    echo "Error: Branch name '$current_branch' does not match the expected pattern '$pattern'"
+    exit 1
+fi
+
+exit 0
