@@ -1,0 +1,19 @@
+name: Merge Dev to Main
+
+on:
+    schedule:
+        - cron: '00 00 * * 5'
+
+jobs:
+    merge:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Merge dev into main
+              run: |
+                  git checkout main
+                  git merge dev
+                  git push
