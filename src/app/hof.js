@@ -7,18 +7,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Image from 'next/image';
 
-export default function HallOfFameComponent() {
+export default function HallOfFameComponent({ onHideCarousel, onShowCarousel }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [isButtonVisible, setIsButtonVisible] = useState(true);
 
     const handleOpen = () => {
         setIsButtonVisible(false);
         onOpen();
+        if (onHideCarousel) onHideCarousel();  // Notify parent to hide carousel
     };
 
     const handleClose = () => {
         setIsButtonVisible(true);
         onClose();
+        if (onShowCarousel) onShowCarousel();  // Notify parent to show carousel again
     };
 
     const buttonStyles = {
@@ -58,16 +60,42 @@ export default function HallOfFameComponent() {
                             pagination={{ clickable: true }}
                             slidesPerView={1}
                         >
-                            <SwiperSlide>
-                                <Box p={4} bg="green.200">
-                                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Image src="/temp.png" alt="Description of Image" width={100} height={100} style={{ marginRight: '200px' }} />
-                                <Image src="/temp.png" alt="Description of Image" width={100} height={100} style={{ marginRight: '200px' }} />
-                                <Image src="/temp.png" alt="Description of Image" width={100} height={100} style={{ marginRight: '200px' }} />
-                                </div>
+            <SwiperSlide>
+                <Box p={4} bg="green.200" display="flex" justifyContent="center" alignItems="center">
+                    
+                    {/* First Project */}
+                    <Box marginRight="30px" textAlign="center">
+                        <Image src="/temp.png" alt="Description of Image" width={100} height={100} />
+                        <Text fontWeight="bold" mt={2}>Project Title 1</Text>
+                        <Text mt={2}>Project Description 1</Text>
+                        <a href="https://github.com/link_to_project1" target="_blank" rel="noreferrer">
+                            <Text color="blue.500" mt={2}>GitHub Link</Text>
+                        </a>
+                    </Box>
+                    
+                    {/* Second Project */}
+                    <Box marginRight="30px" textAlign="center">
+                        <Image src="/temp.png" alt="Description of Image" width={100} height={100} />
+                        <Text fontWeight="bold" mt={2}>Project Title 2</Text>
+                        <Text mt={2}>Project Description 2</Text>
+                        <a href="https://github.com/link_to_project2" target="_blank" rel="noreferrer">
+                            <Text color="blue.500" mt={2}>GitHub Link</Text>
+                        </a>
+                    </Box>
+                    
+                    {/* Third Project */}
+                    <Box textAlign="center">
+                        <Image src="/temp.png" alt="Description of Image" width={100} height={100} />
+                        <Text fontWeight="bold" mt={2}>Project Title 3</Text>
+                        <Text mt={2}>Project Description 3</Text>
+                        <a href="https://github.com/link_to_project3" target="_blank" rel="noreferrer">
+                            <Text color="blue.500" mt={2}>GitHub Link</Text>
+                        </a>
+                    </Box>
 
-                                </Box>
-                            </SwiperSlide>
+                </Box>
+            </SwiperSlide>
+
                             <SwiperSlide>
                                 <Box p={4} bg="yellow.200">
                                 <Image src="/temp.png" alt="Description of Image" width={100} height={100} style={{ marginRight: '200px' }} />
