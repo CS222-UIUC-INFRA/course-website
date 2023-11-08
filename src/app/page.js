@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import CourseCarousel from './CourseCarousel.js'; 
-import HallOfFamePage from '/Users/vedangbhargava/course-website/src/app/hall-of-fame/page.js';
+//import HallOfFamePage from 'src/app/hall-of-fame/page.js';
 
 
 export default function MainPage() {
