@@ -1,25 +1,16 @@
-'use client'
-'use strict';
+import SampleComponent from '@/components/SampleComponent/SampleComponent';
+import Image from 'next/image';
+import { ChakraProvider } from '@chakra-ui/react'
 
-import React, { useState } from 'react';
-import CourseCarousel from './CourseCarousel.js'; 
-import HallOfFameComponent from './hof.js'; 
-
-export default function MainPage() {
-    const [showCourseCarousel, setShowCourseCarousel] = useState(true);
-
-    const hideCourseCarousel = () => {
-        setShowCourseCarousel(false);
-    };
-
-    const showCourseCarouselAgain = () => {
-        setShowCourseCarousel(true);
-    };
+// Added this for testing, can be removed later
+import { Card, CardBody } from '@chakra-ui/react'
 
     return (
-        <div>
-            {showCourseCarousel && <CourseCarousel />}
-            <HallOfFameComponent onHideCarousel={hideCourseCarousel} onShowCarousel={showCourseCarouselAgain} />
-        </div>
+            <Card>
+                <CardBody>
+                    {/* Delete the SampleComponent before starting work on the page */}
+                    <SampleComponent samplePropTitle="This is a Sample Component" />
+                </CardBody>
+            </Card>
     );
 }

@@ -1,6 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Branch naming policy
+Each of the branches needs to follow the pattern feat/ or bug/ or test/. Any branch names other than these will not be merged.
+
+On cloning the repository, run the command 
+```bash
+chmod +x .githooks/pre-commit
+```
+
 ## Getting Started
 
 First, run the development server:
