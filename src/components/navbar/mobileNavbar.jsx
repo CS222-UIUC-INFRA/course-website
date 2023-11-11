@@ -32,7 +32,7 @@ const Links = [
 export default function MobileNavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.900')} className='sm:hidden'>
+    <Box bg={useColorModeValue('gray.100', 'gray.900')} className='navbar sm:hidden'>
       <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
       <Drawer
         isOpen={isOpen}
@@ -86,12 +86,17 @@ const SidebarContent = ({ onClose, ...rest }) => {
 const NavLink = ({ href, name, onClick }) => {
   return (
     <Flex
-      align="center"
-      p="4"
-      mx="4"
-      borderRadius="lg"
-      role="group"
-    >
+        align="center"
+        p="4"
+        mx="4"
+        borderRadius="lg"
+        role="group"
+        cursor="pointer"
+        _hover={{
+          bg: '#A39177',
+          color: 'white',
+        }}
+        >
       <Link
         className="link"
         href={href} onClick={onClick}>

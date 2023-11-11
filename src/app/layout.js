@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
                 <ChakraProvider>
                     <NavBar className='hidden sm:block'/>
                     <MobileNavBar className='sm:hidden'/>
-                    <div style={{ margin: '20px' }}>
+                    <div className='content'>
                     {children}
                     </div>
                 </ChakraProvider>

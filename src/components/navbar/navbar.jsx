@@ -21,11 +21,24 @@ const NavLink = (props) => {
   const { children } = props
 
   return (
-    <Link
-      className="link"
-      href={children.href}>
-      {children.name}
-    </Link>
+    <Flex
+      align="center"
+      p="2"
+      borderRadius="lg"
+      role="group"
+      cursor="pointer"
+      _hover={{
+        bg: '#A39177',
+        color: 'white',
+      }}
+    >
+      <Link
+        className="link"
+        href={children.href}>
+        {children.name}
+      </Link>
+    </Flex>
+
   )
 }
 
@@ -33,7 +46,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Box bg={'#BAAEA7'} px={4} className='hidden sm:block'>
+      <Box bg={'#BAAEA7'} px={4} className='navbar hidden sm:block'>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={8} alignItems={'center'}>
             <Box color={'black'}><span style={{ fontSize: '30px' }}><b>CS222</b></span></Box>
