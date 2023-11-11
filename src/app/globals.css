@@ -98,3 +98,8 @@ a:visited:not(#exclude) {
     color: blue;
     cursor: pointer;
 }
+
+.link {
+    color: #4A4646 !important;
+    font-weight: bold;
+}
