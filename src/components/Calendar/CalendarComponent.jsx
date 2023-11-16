@@ -51,7 +51,7 @@ function CalendarCard({ data }) {
 
 
                     {Object.entries(data.Appendix).map(([label, link], index) => (
-                        <a href={link}>
+                        <a href={link} key={index}>
                             <Button variant='outline' colorScheme='blue' key={index}>
                                 {label}
                             </Button>
