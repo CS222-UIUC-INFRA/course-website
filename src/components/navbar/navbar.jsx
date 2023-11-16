@@ -58,11 +58,11 @@ export default function NavBar() {
           </HStack>
           <HStack>
             {/* add link to course campuswire */}
-            <Link href='https://chakra-ui.com'>
+            <Link href='https://campuswire.com/p/G1FDC5140'>
               Campuswire
             </Link>
             {/* add link to course canvas page */}
-            <Link href='https://chakra-ui.com'>
+            <Link href='https://canvas.illinois.edu/'>
               Canvas
             </Link>
           </HStack>
