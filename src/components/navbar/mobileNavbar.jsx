@@ -26,7 +26,6 @@ const Links = [
   { name: 'Timeline', href: '/timeline' },
   { name: 'Grading', href: '/grading' },
   { name: 'Policy', href: '/policy' },
-  { name: 'Staff', href: '/staff' },
   { name: 'Hall of Fame', href: '/hall-of-fame' },
 ]
 
