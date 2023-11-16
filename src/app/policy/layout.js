@@ -1,4 +1,4 @@
-export default function StaffLayout({
+export default function PolicyLayout({
     children, // will be a page or nested layout
   }) {
     return (
