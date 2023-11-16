@@ -1,5 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import './globals.css';
+import NavBar from '@/components/navbar/navbar';
+import MobileNavBar from '@/components/navbar/mobileNavbar';
 
 export const metadata = {
     title: 'CS222@UIUC',
@@ -9,7 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body><ChakraProvider>{children}</ChakraProvider></body>
+            <body>
+                <ChakraProvider>
+                    <NavBar className='hidden sm:block'/>
+                    <MobileNavBar className='sm:hidden'/>
+                    <div className='content'>
+                    {children}
+                    </div>
+                </ChakraProvider>
+            </body>
         </html>
     );
 }

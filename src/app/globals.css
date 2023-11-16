@@ -12,12 +12,14 @@
 *::after {
     box-sizing: border-box;
 }
+
 /*
   2. Remove default margin
 */
 * {
     margin: 0;
 }
+
 /*
   Typographic tweaks!
   3. Add accessible line-height
@@ -29,6 +31,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: 'Montserrat', sans-serif;
 }
+
 /*
   5. Improve media defaults
 */
@@ -40,6 +43,7 @@ svg {
     display: block;
     max-width: 100%;
 }
+
 /*
   6. Remove built-in form typography styles
 */
@@ -49,6 +53,7 @@ textarea,
 select {
     font: inherit;
 }
+
 /*
   7. Avoid text overflows
 */
@@ -61,6 +66,7 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
+
 /*
   8. Create a root stacking context
 */
@@ -68,6 +74,7 @@ h6 {
 #__next {
     isolation: isolate;
 }
+
 /* CSS_RESET_ENDS */
 
 .container {
@@ -76,16 +83,19 @@ h6 {
     margin-right: auto;
     margin-left: auto;
 }
+
 @media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
+
 @media (min-width: 992px) {
     .container {
         width: 970px;
     }
 }
+
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
@@ -97,4 +107,29 @@ a:visited:not(#exclude) {
     text-decoration: none;
     color: blue;
     cursor: pointer;
+}
+
+.link {
+    color: #4A4646 !important;
+    font-weight: bold;
+
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #BAAEA7;
+}
+
+.content {
+    padding: 3%;
+    margin-top: 20%;
+}
+
+@media all and (min-width: 640px) {
+    .content {
+        margin-top: 3%;
+    }
 }
