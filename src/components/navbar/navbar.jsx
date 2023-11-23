@@ -6,6 +6,7 @@ import {
   HStack,
 } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useState } from 'react'
 
 
 const Links = [
@@ -17,8 +18,7 @@ const Links = [
   { name: 'Policy', href: '/policy' },
   { name: 'Hall of Fame', href: '/hall-of-fame' },
 ]
-const NavLink = (props) => {
-  const { children } = props
+const NavLink = ({ linkClass, link, handleSelection }) => {
 
   return (
     <Flex
@@ -28,14 +28,15 @@ const NavLink = (props) => {
       role="group"
       cursor="pointer"
       _hover={{
-        bg: '#A39177',
+        bg: '#D9D4CD',
         color: 'white',
       }}
+      onClick={() => handleSelection(link.name)}
     >
       <Link
-        className="link"
-        href={children.href}>
-        {children.name}
+        className={linkClass}
+        href={link.href}>
+        {link.name}
       </Link>
     </Flex>
 
@@ -43,6 +44,11 @@ const NavLink = (props) => {
 }
 
 export default function NavBar() {
+
+  const [currentSelection, setCurrentSelection] = useState('');
+  const handleSelection = (selectedItem) => {
+    setCurrentSelection(selectedItem);
+  };
 
   return (
     <>
@@ -52,7 +58,7 @@ export default function NavBar() {
             <Box color={'black'}><span style={{ fontSize: '30px' }}><b>CS222</b></span></Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link.name}>{link}</NavLink>
+                <NavLink key={link.name} linkClass = {currentSelection === link.name ? 'link-selected' : 'link' } link={link} handleSelection={handleSelection} />
               ))}
             </HStack>
           </HStack>

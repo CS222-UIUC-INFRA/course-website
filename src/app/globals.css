@@ -111,9 +111,11 @@ a:visited:not(#exclude) {
 
 .link {
     color: #4A4646 !important;
+}
+
+.link-selected {
+    color: black !important;
     font-weight: bold;
-
-
 }
 
 .navbar {
@@ -121,6 +123,7 @@ a:visited:not(#exclude) {
     top: 0;
     width: 100%;
     background-color: #BAAEA7;
+    z-index: 10000;
 }
 
 .content {
