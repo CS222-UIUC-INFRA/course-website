@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import SampleComponent from '@/components/SampleComponent/SampleComponent';
 import Image from 'next/image';
 import { ChakraProvider } from '@chakra-ui/react'
@@ -13,5 +14,14 @@ export default function Home() {
                     <SampleComponent samplePropTitle="This is a Sample Component" />
                 </CardBody>
             </Card>
+=======
+export default function Home() {
+    return (
+        <div>
+            <span style={{ fontWeight: 'bold', fontSize: '20px'}}>
+            Welcome to CS222!
+            </span>
+        </div>
+>>>>>>> Stashed changes
     );
 }
