@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 
 const Links = [
-  { name: 'Description', href: '/description' },
+  { name: 'Course Info', href: '/course-info' },
   { name: 'Syllabus', href: '/syllabus' },
   { name: 'Course Resources', href: '/course-resources' },
   { name: 'Timeline', href: '/timeline' },
