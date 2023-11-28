@@ -2,7 +2,7 @@
 
 import styles from './staff.module.css'
 import { Accordion, AccordionButton, AccordionItem, Box, AccordionIcon, AccordionPanel } from '@chakra-ui/react'
-
+import { leadCAData } from '@/data/staff/leadCA'
 export default function StaffPage() {
 
   return (
@@ -20,22 +20,6 @@ export default function StaffPage() {
 
     </div>
 
-  )
-  return (
-    <div className="flex flex-col px-36 mx-12 py-8 gap-4">
-
-      <h1 className="text-4xl font-bold text-left my-4">Staff Directory</h1>
-
-      <p className="text-base leading-relaxed my-4">
-        Welcome to our CS222 staff directory.
-        Here you can find all of our staff members and their contact information.
-      </p>
-
-      <InstructorSection />
-
-      <LeadCASection />
-
-    </div>
   )
 }
 
@@ -159,61 +143,16 @@ function LeadCACard({ name, hobby, major, pronouns, email }) {
 
 function LeadCASection() {
 
-  const leadCA = [{
-    name: "Ryan Ziegler",
-    hobby: "placeholder",
-    major: "placeholder",
-    pronouns: "placeholder",
-    email: "emailplaceholder"
-  },
-  {
-    name: "Alexander Kwandou",
-    hobby: "placeholder",
-    major: "placeholder",
-    pronouns: "placeholder",
-    email: "emailplaceholder"
-  },
-  {
-    name: "Aydan Pirani",
-    hobby: "placeholder",
-    major: "placeholder",
-    pronouns: "placeholder",
-    email: "placeholder"
-  },
-  {
-    name: "Liza George",
-    hobby: "placeholder",
-    major: "placeholder",
-    pronouns: "placeholder",
-    email: "emailplaceholder"
-  },
-
-  ]
+  
 
   return (
     <section>
-      <h2 className="text-2xl font-semibold mt-6">Instructor</h2>
+      <h2 className="text-2xl font-semibold mt-6">Lead CAs</h2>
       <div className="flex flex-wrap -mx-4 mt-4">
-      {leadCA.map((ca, idx) => (
+      {leadCAData.map((ca, idx) => (
           <LeadCACard key={idx} name={ca.name} hobby={ca.hobby} major={ca.major} pronouns={ca.pronouns} email={ca.email} />
         ))}
       </div>
-      {/* 
-      <h1 className="text-2xl font-bold text-left my-4">Professor</h1>
-
-
-      <div className={`${styles.instructordiv} bg-blue-200 p-8 flex flex-row justify-between`}>
-        <div>
-          <div className="text-3xl font-bold text-blue-900">Michael Joseph Woodley</div>
-          <div className="text-lg text-blue-800 mt-2">Clinical Assistant Professor</div>
-          <div className="text-blue-800 mt-4">
-            <div>(217) 244-1971</div>
-            <div>mwoodley@illinois.edu</div>
-            <div>2101 Siebel Center for Comp Sci</div>
-          </div>
-       
-
-      </div> */}
     </section>
   )
   return (

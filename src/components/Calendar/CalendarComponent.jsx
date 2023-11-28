@@ -20,7 +20,7 @@ function CalendarCard({ data }) {
             overflow='hidden'
             variant='outline'
         >
-            <a href={data.Recording} className="h-full w-1/3 border">
+            <a href={data.Recording} className="hidden md:block lg:block h-full w-1/3 border">
                 <img
                     className="h-full w-full object-cover"
                     src={formatPictureUrl(data.Recording)}
