@@ -46,7 +46,6 @@ const NavLink = (props) => {
 export default function NavBar() {
 
   return (
-    <>
       <Box bg={'#BAAEA7'} px={4} className='navbar hidden sm:block'>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={8} alignItems={'center'}>
@@ -69,6 +68,5 @@ export default function NavBar() {
           </HStack>
         </Flex>
       </Box>
-    </>
   )
 }

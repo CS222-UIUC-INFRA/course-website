@@ -15,7 +15,7 @@ function CalendarCard({ data }) {
 
     return (
         <Card
-            className="h-64"
+            className="h-64 z-0"
             direction='row'
             overflow='hidden'
             variant='outline'
@@ -74,7 +74,7 @@ export default function CalendarComponent({ calendarJson }) {
     return (
         // This is how you use module scoped CSS (use this method only if TailwindCSS isn't able to handle the usecase)
         <div className={styles.container}>
-            <div className="flex flex-col gap-4 p-20">
+            <div className="w-full h-full flex flex-col gap-4 p-20">
                 {/* This is how you use TailwindCSS */}
                 {
                     calendarJson.Content.map((data, index) => (
