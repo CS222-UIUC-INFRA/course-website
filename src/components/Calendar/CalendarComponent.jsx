@@ -15,12 +15,12 @@ function CalendarCard({ data }) {
 
     return (
         <Card
-            className="h-64"
+            className="h-64 z-0"
             direction='row'
             overflow='hidden'
             variant='outline'
         >
-            <a href={data.Recording} className="h-full w-1/3 border">
+            <a href={data.Recording} className="hidden md:block lg:block h-full w-1/3 border">
                 <img
                     className="h-full w-full object-cover"
                     src={formatPictureUrl(data.Recording)}
@@ -51,7 +51,7 @@ function CalendarCard({ data }) {
 
 
                     {Object.entries(data.Appendix).map(([label, link], index) => (
-                        <a href={link}>
+                        <a href={link} key={index}>
                             <Button variant='outline' colorScheme='blue' key={index}>
                                 {label}
                             </Button>
@@ -72,10 +72,8 @@ function CalendarCard({ data }) {
 
 export default function CalendarComponent({ calendarJson }) {
     return (
-        // This is how you use module scoped CSS (use this method only if TailwindCSS isn't able to handle the usecase)
         <div className={styles.container}>
-            <div className="flex flex-col gap-4 p-20">
-                {/* This is how you use TailwindCSS */}
+            <div className="w-full h-full flex flex-col gap-4 p-20">
                 {
                     calendarJson.Content.map((data, index) => (
                         <CalendarCard className="m-20" key={index} data={data} />
