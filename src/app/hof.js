@@ -69,7 +69,7 @@ export default function HallOfFameComponent({ onHideCarousel, onShowCarousel }) 
                         <Text fontWeight="bold" mt={2}>Project Title 1</Text>
                         <Text mt={2}>Project Description 1</Text>
                         <a href="https://github.com/link_to_project1" target="_blank" rel="noreferrer">
-                            <Text color="blue.500" mt={2}>GitHub Link</Text>
+                            <Text color="red.500" mt={2}>GitHub Link</Text>
                         </a>
                     </Box>
                     
@@ -104,7 +104,7 @@ export default function HallOfFameComponent({ onHideCarousel, onShowCarousel }) 
                                 </Box>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Box p={4} bg="blue.200">
+                                <Box p={4} bg="red.200">
                                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Image src="/temp.png" alt="Description of Image" width={100} height={100} style={{ marginRight: '200px' }} />
                                     <Image src="/temp.png" alt="Description of Image" width={100} height={100} style={{ marginRight: '200px' }} />
